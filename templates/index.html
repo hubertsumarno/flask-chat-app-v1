@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat Room{% endblock %}
+
+{% block body %}
+    <h1>Chat Room</h1>
+    <ul>
+        {% for row in rows %}
+            <li>{{ row["message"] }} from {{ row["name"] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/send">Send Message</a>
+{% endblock %}
